@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>TEST</title>
+<script src="//content.jwplatform.com/players/bpAWBktx-QKPXmdGh.js"></script>
+</head>
+<body>
+
+<h3>m3u8 Datei</h3>
+<pre>
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=560000,RESOLUTION=480x270,CODECS="mp4a.40.2,avc1.77.30"
+https://videos-f.jwpsrv.com/content/conversions/fzq6Y0m1/videos/AiiOvDZJ-15877694.mp4.m3u8?token=0_578668d0_0x0f7f435001a6b5b580108f653989099e0360ccfb
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3550000,RESOLUTION=1920x1080,CODECS="mp4a.40.2,avc1.77.30"
+https://videos-f.jwpsrv.com/content/conversions/fzq6Y0m1/videos/AiiOvDZJ-15877699.mp4.m3u8?token=0_578668d0_0xdc85c56c955f0b810bc90c53b682c410a67a35ae
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1730000,RESOLUTION=1280x720,CODECS="mp4a.40.2,avc1.77.30"
+https://videos-f.jwpsrv.com/content/conversions/fzq6Y0m1/videos/AiiOvDZJ-15877696.mp4.m3u8?token=0_578668d0_0x458e3277c0c6a3b5da9579b56f6ed19ac819ad32
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=790000,RESOLUTION=720x406,CODECS="mp4a.40.2,avc1.77.30"
+https://videos-f.jwpsrv.com/content/conversions/fzq6Y0m1/videos/AiiOvDZJ-15877695.mp4.m3u8?token=0_578668d0_0xd584e9aa3e4e52d59b974308ecab18bdd889ec8b
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=390000,RESOLUTION=320x180,CODECS="mp4a.40.2,avc1.77.30"
+https://videos-f.jwpsrv.com/content/conversions/fzq6Y0m1/videos/AiiOvDZJ-15877693.mp4.m3u8?token=0_578668d0_0x04ef2afd7cb5e41f95326166db66cf148d4e7f06
+</pre>
+
+<script>
+
+    var player = jwplayer(),
+            origConfig = player.getConfig(),
+            id = origConfig.id;
+
+    player.remove();
+
+    document.write("<div id='" + id + "'></div>");
+    origConfig.hlslabels = {
+        "3550":'labels.player_quality_highest',
+        "1730":'labels.player_quality_veryhigh',
+        "790": 'labels.player_quality_high',
+        "560": 'labels.player_quality_good',
+        "390":'labels.player_quality_medium'
+    };
+    origConfig.autostart = true;
+
+    jwplayer(id).setup(origConfig);
+
+</script>
+
+</body>
+</html>
